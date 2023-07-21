@@ -10,7 +10,9 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 sudo apt install -y build-essential
 
 # Create and activate conda environment
-conda create -y --prefix /notebooks/env/textgen python=3.10.9
+if [ ! -d "/notebooks/env/textgen" ]; then
+  conda create -y --prefix /notebooks/env/textgen python=3.10.9
+fi
 conda init bash
 source ~/.bashrc
 source activate /notebooks/env/textgen
