@@ -14,8 +14,8 @@ if [ ! -d "/notebooks/env/textgen" ]; then
   conda create -y --prefix /notebooks/env/textgen python=3.10.9
 fi
 conda init bash
-source ~/.bashrc
-source activate /notebooks/env/textgen
+echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
+conda activate /notebooks/env/textgen
 
 # Install PyTorch and dependencies
 pip install torch torchvision torchaudio
