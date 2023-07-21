@@ -10,10 +10,9 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 sudo apt install -y build-essential
 
 # Create and activate conda environment
-conda create -y -n textgen python=3.10.9
+conda create --prefix /notebooks/env/textgen python=3.10.9
 conda init bash
-source ~/.bashrc
-source activate textgen
+conda activate /notebooks/env/textgen
 
 # Install PyTorch and dependencies
 pip install torch torchvision torchaudio
@@ -81,7 +80,7 @@ python -m ipykernel install --user --name textgen
 # Install custom packages
 
 export PATH="$HOME/miniconda3/bin:$PATH"
-source activate textgen
+conda activate /notebooks/env/textgen
 
 pip install -r /notebooks/requirements.txt --upgrade
 python -m spacy download en_core_web_sm
