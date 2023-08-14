@@ -103,6 +103,9 @@ git config --global user.name "Sasha Alyushin"
 # Launch webui
 cd /notebooks/text-generation-webui
 
+export PATH="$HOME/miniconda3/bin:$PATH"
+source activate /notebooks/env/textgen
+
 while true; do
     echo "Выберите вариант запуска:"
     echo "1. API и WebUI"
