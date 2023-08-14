@@ -13,9 +13,8 @@ sudo apt install -y build-essential
 if [ ! -d "/notebooks/env/textgen" ]; then
   conda create -y --prefix /notebooks/env/textgen python=3.10.9
 fi
-conda init bash
-echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
-conda activate /notebooks/env/textgen
+PATH="$HOME/miniconda3/bin:$PATH"
+source activate /notebooks/env/textgen
 
 # Install PyTorch and dependencies
 pip install torch torchvision torchaudio
@@ -82,9 +81,9 @@ python -m ipykernel install --user --name textgen
 
 # Install custom packages
 
-conda init bash
-echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
-conda activate /notebooks/env/textgen
+#conda init bash
+#echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
+#conda activate /notebooks/env/textgen
 
 pip install -r /notebooks/requirements.txt --upgrade
 python -m spacy download en_core_web_sm
@@ -104,9 +103,9 @@ git config --global user.name "Sasha Alyushin"
 # Launch webui
 cd /notebooks/text-generation-webui
 
-conda init bash
-echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
-conda activate /notebooks/env/textgen
+#conda init bash
+#echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
+#conda activate /notebooks/env/textgen
 
 while true; do
     echo "Выберите вариант запуска:"
