@@ -81,10 +81,6 @@ python -m ipykernel install --user --name textgen
 
 # Install custom packages
 
-#conda init bash
-#echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
-#conda activate /notebooks/env/textgen
-
 pip install -r /notebooks/requirements.txt --upgrade
 python -m spacy download en_core_web_sm
 
@@ -102,10 +98,6 @@ git config --global user.name "Sasha Alyushin"
 
 # Launch webui
 cd /notebooks/text-generation-webui
-
-#conda init bash
-#echo "conda activate /notebooks/env/textgen" >> ~/.bashrc
-#conda activate /notebooks/env/textgen
 
 while true; do
     echo "Выберите вариант запуска:"
